@@ -32,7 +32,7 @@ Route::get('/posts/{id}', function ($id) {
 
 
 Route::get('/search/', function (Request $request) {
-    dd($request);
+    return ($request->name . ' ' . $request->city);
 });
 
 Route::get('/debug/{id}', function ($id) {
