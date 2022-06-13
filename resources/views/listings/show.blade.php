@@ -1,10 +1,13 @@
-
 @extends('layout')
 
 @section('content')
+@include('partials._hero')
+@include('partials._search')
+ 
+ 
+<div class="lg:grid lg:grid-cols-2 gap-4 space=-y-4 md:space-y-0 mx-4">
 
-<a href="/" class="inline-block text-black ml-4 mb-4"
-><i class="fa-solid fa-arrow-left"></i> Back
+	<i class="fa-solid fa-arrow-left"></i> Back
 </a>
            <div class="mx-4">
                 <x-card class="p-10">
@@ -70,4 +73,4 @@
                 </x-card>
             </div>
         </main>
-@endsection
+	@endsection
