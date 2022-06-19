@@ -12,7 +12,9 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
-        <script src="https://cdn.tailwindcss.com"></script>
+        {{-- Alpine JS  --}}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.2/cdn.js"></script>
+         <script src="https://cdn.tailwindcss.com"></script>
         <script>
             tailwind.config = {
                 theme: {
@@ -62,6 +64,7 @@
                 >Post Job</a
             >
         </footer>
+        <x-flash-message />
     </body>
 </html>
 
