@@ -5,6 +5,7 @@ namespace App\routes;
 use App\Models\Listing;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ListingController;
+use App\Http\Controllers\UserController;
 
 
 /*
@@ -44,6 +45,12 @@ Route::get(
     '/listings/{listing}',
     [ListingController::class, 'show']
 );
+
+//  Show Register Create Form
+Route::get('/register', [UserController::class, 'create']);
+
+// Create New User
+Route::post('/users', [UserController::class, 'store']);
 
 // Common Resource Routes:
 // index - Show all listings
