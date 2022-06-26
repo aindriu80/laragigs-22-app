@@ -55,6 +55,12 @@ Route::post('/users', [UserController::class, 'store']);
 // Logout functionality
 Route::post('/logout', [UserController::class, 'logout']);
 
+// Show Login form
+Route::get('/login', [UserController::class, 'login']);
+
+// Log in User
+Route::post('/users/authenticate', [UserController::class, 'authenticate']);
+
 // Common Resource Routes:
 // index - Show all listings
 // show - Show single listing
