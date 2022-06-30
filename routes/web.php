@@ -40,6 +40,9 @@ Route::put('/listings/{listing}', [listingController::class, 'update'])->middlew
 // Delete listing
 Route::delete('/listings/{listing}', [listingController::class, 'destroy'])->middleware('auth');
 
+// Manage Listings
+Route::get('/listings/manage', [ListingController::class, 'manage'])->middleware('auth');
+
 // Single Listing
 Route::get(
     '/listings/{listing}',
@@ -60,6 +63,7 @@ Route::get('/login', [UserController::class, 'login'])->name('login')->middlewar
 
 // Log in User
 Route::post('/users/authenticate', [UserController::class, 'authenticate']);
+
 
 // Common Resource Routes:
 // index - Show all listings
